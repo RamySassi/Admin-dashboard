@@ -3,7 +3,7 @@ import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import all_orders from '../../constants/orders'; // Update with your file path
-import { FaUserPlus } from 'react-icons/fa'; // Example icon from react-icons
+import { FaUserPlus, FaBox } from 'react-icons/fa'; // Example icons from react-icons
 
 // Register Chart.js components
 ChartJS.register(
@@ -41,17 +41,12 @@ const Dashboard = () => {
             const twoMonthsAgo = new Date();
             twoMonthsAgo.setMonth(now.getMonth() - 2);
 
-            // Helper function to parse the date
-            const parseDate = (dateStr) => {
-                const [day, month, year] = dateStr.split(' ');
-                const monthIndex = new Date(Date.parse(month + " 1, 2021")).getMonth(); // Convert month name to index
-                return new Date(`${month} ${day}, ${year}`);
-            };
-
             // Filter orders from the last 2 months
             const newOrders = all_orders.filter(order => {
                 // Convert date to JavaScript Date object
-                const orderDate = parseDate(order.date.split(',')[0]);
+                const [day, month, year] = order.date.split(',')[0].split(' ');
+                const orderDate = new Date(`${month} ${day}, ${year}`);
+                
                 return orderDate >= twoMonthsAgo;
             });
 
@@ -112,25 +107,40 @@ const Dashboard = () => {
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 fill: true,
-                tension: 0.1,
+                tension: 0.5,
             },
         ],
     };
 
     const chartOptions = {
         responsive: true,
+        maintainAspectRatio: false, // Allows you to set a fixed height
+        plugins: {
+            legend: {
+                display: false, // Optionally hide the legend
+            },
+        },
         scales: {
             y: {
-                beginAtZero: true, // Ensures the y-axis starts at 0
+                beginAtZero: true,
+            },
+            x: {
+                ticks: {
+                    autoSkip: true, // Optionally skip some x-axis labels if they are too crowded
+                    maxRotation: 45, // Rotate x-axis labels for better fit
+                    minRotation: 45,
+                },
             },
         },
     };
+    
 
     return (
+        <div className="container p-4">
         <div className="container">
             <main>
-                <div className="row">
-                    <div className="col-md-6 mb-4">
+                <div className="row mb-4">
+                    <div className="col-md-4 mb-4">
                         <div className="card shadow-sm border-primary">
                             <div className="card-body">
                                 <div className="d-flex align-items-center">
@@ -144,7 +154,7 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 mb-4">
+                    <div className="col-md-4 mb-4">
                         <div className="card shadow-sm border-primary">
                             <div className="card-body">
                                 <div className="d-flex align-items-center">
@@ -152,27 +162,36 @@ const Dashboard = () => {
                                     <div>
                                         <h5 className="card-title">New Users Last 2 Months</h5>
                                         <p className="card-text display-4">{stats.newUsersLastTwoMonths}</p>
-                                        <small className="text-muted">Number of users who placed orders in the last 2 months.</small>
+                                        <small className="text-muted">Number of users  in the last 2 months.</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-12 mb-4">
-                        <div className="card">
+                    <div className="col-md-4 mb-4">
+                        <div className="card shadow-sm border-primary">
                             <div className="card-body">
-                                <h5 className="card-title">Most Frequent Product</h5>
-                                <p className="card-text">{stats.mostFrequentProduct}</p>
+                                <div className="d-flex align-items-center">
+                                    <FaBox size={40} className="text-primary me-3" />
+                                    <div>
+                                        <h5 className="card-title">Most Frequent Offer</h5>
+                                        <p className="card-text display-4">{stats.mostFrequentProduct}</p>
+                                        <small className="text-muted">Most frequently Offer.</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="row">
                     <div className="col-md-12 mb-4">
                         <div className="card">
                             <div className="card-body">
                                 <h5 className="card-title">Number of Users per Date</h5>
                                 <div className="chart-container">
-                                    <Line data={activityChartData} options={chartOptions} ref={chartRef} />
-                                </div>
+    <Line data={activityChartData} options={chartOptions} ref={chartRef} />
+</div>
+
                             </div>
                         </div>
                     </div>
@@ -181,6 +200,7 @@ const Dashboard = () => {
             <footer className="text-center my-4">
                 <p>&copy; 2024 Admin Dashboard</p>
             </footer>
+        </div>
         </div>
     );
 };

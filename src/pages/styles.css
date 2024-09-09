@@ -152,3 +152,83 @@ td span {
     font-weight: 700;
     border-color: #FFFFFF;
 }
+.add-user-btn {
+    padding: 10px 20px;
+    background-color: #2D83B5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.add-user-btn:hover {
+    background-color: #2D83B5;
+}
+/* Input Field Styles */
+.add-user-form .form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    background-color: #f9fafb;
+}
+
+.add-user-form .form-group input:focus {
+    border-color: #007bff; /* Blue border when focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
+}
+
+.add-user-form .form-group input::placeholder {
+    color: #aaa; /* Lighter color for placeholder text */
+}
+
+.add-user-form .form-group input:hover {
+    border-color: #ccc; /* Slightly darker border on hover */
+}
+
+/* Submit Button Styling */
+.add-user-form .submit-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-user-form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #0056b3;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.add-user-form .submit-btn:active {
+    background-color: #004085;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}

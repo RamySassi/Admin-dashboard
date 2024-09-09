@@ -204,6 +204,138 @@ const all_orders = [
         price: "250,00",
         status: "Canceled"
     },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    },
+    {
+        id: "#1242",
+        date: "25 Nov, 10:20 AM",
+        email: "lisa.white@reqres.in",
+        first_name: "Lisa",
+        last_name: "White",
+        avatar: "https://reqres.in/img/faces/5-image.jpg",
+        product: "Office Chair",
+        price: "250,00",
+        status: "Canceled"
+    }
 ];
 
 export default all_orders;
