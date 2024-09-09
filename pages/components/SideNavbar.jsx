@@ -1,17 +1,14 @@
 import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu ,GiTeamIdea } from "react-icons/gi";
 import { Disclosure } from "@headlessui/react";
 import {
   MdOutlineSpaceDashboard,
-  MdOutlineAnalytics,
-  MdOutlineIntegrationInstructions,
-  MdOutlineMoreHoriz,
   MdOutlineSettings,
   MdOutlineLogout,
+  MdEmojiEvents,
 } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import { FaRegComments } from "react-icons/fa";
-import { BiMessageSquareDots } from "react-icons/bi";
+import { FaUsers } from "react-icons/fa";
+import { GrAnnounce } from "react-icons/gr";
 
 function SideNavbar() {
   return (
@@ -36,27 +33,27 @@ function SideNavbar() {
                 </h3>
               </div>
               <div className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
-                <CgProfile className="text-2xl text-gray-600 group-hover:text-white " />
+                <FaUsers className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                  Profile
+                  Users
                 </h3>
               </div>
               <div className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
-                <FaRegComments className="text-2xl text-gray-600 group-hover:text-white " />
+                <GiTeamIdea className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                  Comments
+                  Our Team
                 </h3>
               </div>
               <div className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
-                <MdOutlineAnalytics className="text-2xl text-gray-600 group-hover:text-white " />
+                <GrAnnounce className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                  Analytics
+                  Annoucments
                 </h3>
               </div>
               <div className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
-                <BiMessageSquareDots className="text-2xl text-gray-600 group-hover:text-white " />
+                <MdEmojiEvents className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                  Messages
+                  Events
                 </h3>
               </div>
               {/* <div className="flex  mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
@@ -74,12 +71,12 @@ function SideNavbar() {
                   Settings
                 </h3>
               </div>
-              <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
+              {/* <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
                 <MdOutlineMoreHoriz className="text-2xl text-gray-600 group-hover:text-white " />
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
                   More
                 </h3>
-              </div>
+              </div> */}
             </div>
             {/* logout */}
             <div className=" my-4">
