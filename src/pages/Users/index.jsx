@@ -9,7 +9,6 @@ import DoneIcon from '../../assets/icons/done.svg';
 import CancelIcon from '../../assets/icons/cancel.svg';
 import RefundedIcon from '../../assets/icons/refunded.svg';
 
-
 function Users () {
     const [search, setSearch] = useState('');
     const [orders, setOrders] = useState(all_orders);
